@@ -1,0 +1,18 @@
+{
+  "manifest_version":3,
+  "name":"Chrome Color Changer",
+  "version":"1.0",
+  "description":"Google Chrome上に表示される全てのDOM要素の表示色を変更する",
+  "permissions":["storage"],
+  "host_permissions":["<all_urls>"],
+  "action":{
+    "default_popup":"popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["main.js"],
+      "css":["styles.css"]
+    }
+  ]
+}
